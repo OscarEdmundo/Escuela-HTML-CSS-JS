@@ -1,11 +1,8 @@
-  /*	playable.js
+/*	playable.js
 *	Por: Oscar E. Palacios
 *	Fecha: 17-04-2021
 */
-/*
 
-<div id="columna-css">CSS</div>
-*/
 const playable={
 	editable:document.createElement('style'),
 	textareaHTM:document.querySelector('.playable-htm'),
