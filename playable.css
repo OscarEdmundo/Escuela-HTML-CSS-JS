@@ -1,0 +1,105 @@
+/*	playable.css
+*	Por: Oscar E. Palacios
+*	Fecha: 17-04-2021
+*/
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+
+.playable {
+	background-color:#eee;
+	color:#333;
+	font:1.2em / 1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* styles for the editor */
+.playable textarea{
+  font:normal 14px monospace;
+  display: block;
+  margin-bottom: 4px;
+  background-color: rgba(192, 192, 192, .25);
+  color: #008;
+  border: dotted 1px green;
+  padding: 5px 10px;
+  resize:none;
+}
+
+.playable-css, .playable-htm, .playable-preview{
+  min-height:160px;
+  width: 85% !important;
+}
+
+#css-row, #html-row, #salida-row{
+  min-height:160px;
+  width: 100% !important;
+  border:none !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.playable-buttons{
+  width:100%;
+}
+
+.playable-buttons button{
+  border:none;
+  background-color:#a52a2a;
+  color:white;
+  height:32px;
+  font:normal 14px arial;
+  padding:5px 10px;
+  margin-right:1px;
+}
+
+.playable-buttons button[id*=auto-update]{
+  background-color:rgb(0, 0, 0);
+  color:gray;
+  float:right;
+}
+
+.playable-buttons button[id=playable-run]{
+  background-color:#3972AC;
+  color:white;
+}
+
+.playable-buttons button:hover{
+  cursor:pointer;
+}
+
+.playable-button-active{
+  background-color:#4CB24C !important;
+  color:white !important;
+}
+
+/* playable-row: contenedor de dos columnas */
+.playable-row{
+  display:flex;
+  gap:0;
+}
+
+/* playable-preview: contenida dentro de  de playable-row */
+.playable-preview {
+  border: solid .5mm #ccc !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.playable-row > div[id*=columna]{
+  all:initial;
+  width:15% !important;
+  align-self:center;
+  text-align:center;
+  margin:0 !important;
+  background-color:#e0e0e0 !important;
+  color:#3972AC !important;
+  font:normal 1.2rem/1.5 Helvetica, Arial, sans-serif !important;
+  display:none;
+}
+
+@media screen and (min-width:480px) {
+.playable-row > div[id*=columna]{
+  display:block;
+}
+}
